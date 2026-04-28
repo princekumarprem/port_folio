@@ -14,11 +14,10 @@
     <nav class="navbar">
         <div class="logo">&lt;Prince /&gt;</div>
 
-        <!-- ☰ MENU BUTTON -->
         <div class="menu-toggle" id="menu-toggle">☰</div>
 
         <ul id="nav-links">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="project.html">Projects</a></li>
             <li><a href="skill.html">Skills</a></li>
@@ -76,11 +75,10 @@
 
     </section>
 
-    <!-- ECG + TEXT -->
+    <!-- 🔥 MOVING TEXT -->
     <div class="heartbeat">
-        <div class="line"></div>
-
         <div class="name">
+            Prince Kumar Prem • Developer • Designer • Creator •
             Prince Kumar Prem • Developer • Designer • Creator •
             Prince Kumar Prem • Developer • Designer • Creator •
         </div>
@@ -88,7 +86,6 @@
 
     <!-- JS -->
     <script>
-
         // CLOCK
         function updateClock() {
             let now = new Date();
@@ -111,26 +108,20 @@
 
             document.getElementById("digital").innerText = `${hh}:${mm} ${ampm}`;
         }
-
         setInterval(updateClock, 1000);
 
-
-        // TYPING TEXT
+        // TYPING
         const roles = ["Java Developer", "Android Developer", "Web Developer"];
-
         let i = 0, j = 0, current = "", del = false;
 
         function typing() {
             let txt = roles[i];
 
-            if (!del) {
-                current = txt.substring(0, j++);
-            } else {
-                current = txt.substring(0, j--);
-            }
+            if (!del) current = txt.substring(0, j++);
+            else current = txt.substring(0, j--);
 
             document.getElementById("typing").innerText = current;
-            document.getElementById("typing").style.width = "300px";
+
             if (!del && j == txt.length) {
                 del = true;
                 setTimeout(typing, 1000);
@@ -144,11 +135,17 @@
 
             setTimeout(typing, del ? 50 : 100);
         }
-
         typing();
 
+        // MENU
+        const menuToggle = document.getElementById("menu-toggle");
+        const navLinks = document.getElementById("nav-links");
+
+        menuToggle.onclick = () => {
+            navLinks.classList.toggle("active");
+        };
     </script>
-    <script src="script.js"></script>
+
 </body>
 
 </html>

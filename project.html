@@ -3,24 +3,33 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Projects - Prince</title>
-    <link rel="stylesheet" href="project.css">
+
+    <!-- 🔥 MUST FOR MOBILE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projects - Prince Prem</title>
+
+    <!-- COMMON CSS -->
     <link rel="stylesheet" href="index.css">
+
+    <!-- PAGE CSS -->
+    <link rel="stylesheet" href="project.css">
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
+    <!-- ================= NAVBAR ================= -->
     <nav class="navbar">
+
         <div class="logo">&lt;Prince /&gt;</div>
 
-        <!-- ☰ MENU BUTTON -->
+        <!-- ☰ HAMBURGER -->
         <div class="menu-toggle" id="menu-toggle">☰</div>
 
         <ul id="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="project.html">Projects</a></li>
+            <li><a href="project.html" class="active">Projects</a></li>
             <li><a href="skill.html">Skills</a></li>
             <li><a href="exp.html">Experience</a></li>
             <li><a href="certify.html">Certification</a></li>
@@ -28,74 +37,83 @@
             <li><a href="cont.html">Contact</a></li>
             <li><a href="gall.html">Gallery</a></li>
         </ul>
+
     </nav>
 
-    <!-- PROJECT SECTION -->
+    <!-- ================= PROJECT SECTION ================= -->
     <section class="projects">
 
-        <h1>My Projects</h1>
+        <h1>🚀 My Projects</h1>
 
         <div class="project-container">
 
-            <!-- CARD 1 -->
+            <!-- PROJECT 1 -->
             <div class="card">
                 <h3>📒 Smart Note App</h3>
-                <p>A modern note-taking app with Firebase Authentication and real-time database.</p>
+                <p>Modern note app with Firebase Authentication & real-time database.</p>
                 <span>Java • Firebase • XML</span>
+
                 <div class="btns">
-                    <button>Live</button>
-                    <button>GitHub</button>
+                    <button onclick="window.open('#')">Live</button>
+                    <button onclick="window.open('#')">GitHub</button>
                 </div>
             </div>
 
-            <!-- CARD 2 -->
+            <!-- PROJECT 2 -->
             <div class="card">
                 <h3>🏦 Bank Management System</h3>
-                <p>Java-based system with login, deposit, withdraw and PIN change.</p>
+                <p>Java system with login, deposit, withdraw, balance & PIN change.</p>
                 <span>Java • Swing • MySQL</span>
+
                 <div class="btns">
-                    <button>Live</button>
-                    <button>GitHub</button>
+                    <button onclick="window.open('#')">Live</button>
+                    <button onclick="window.open('#')">GitHub</button>
                 </div>
             </div>
 
-            <!-- CARD 3 -->
+            <!-- PROJECT 3 -->
             <div class="card">
                 <h3>💪 Smart Health Tracker</h3>
-                <p>Tracks steps, water intake and BMI with Firebase integration.</p>
+                <p>Track steps, water intake & BMI with Firebase + Room DB.</p>
                 <span>Android • Firebase • Room DB</span>
+
                 <div class="btns">
-                    <button>Live</button>
-                    <button>GitHub</button>
+                    <button onclick="window.open('#')">Live</button>
+                    <button onclick="window.open('#')">GitHub</button>
                 </div>
             </div>
 
-            <!-- CARD 4 -->
+            <!-- PROJECT 4 -->
             <div class="card">
                 <h3>🏥 E-Hospital System</h3>
                 <p>24/7 hospital management system with patient records.</p>
                 <span>Flutter • Firebase</span>
+
                 <div class="btns">
-                    <button>Live</button>
-                    <button>GitHub</button>
+                    <button onclick="window.open('#')">Live</button>
+                    <button onclick="window.open('#')">GitHub</button>
                 </div>
             </div>
 
-            <!-- CARD 5 -->
+            <!-- PROJECT 5 -->
             <div class="card">
                 <h3>📄 Income Certificate App</h3>
-                <p>Android app for applying and managing income certificates.</p>
+                <p>Android app for applying & managing income certificates.</p>
                 <span>Android • Firebase</span>
+
                 <div class="btns">
-                    <button>Live</button>
-                    <button>GitHub</button>
+                    <button onclick="window.open('#')">Live</button>
+                    <button onclick="window.open('#')">GitHub</button>
                 </div>
             </div>
 
         </div>
 
     </section>
+
+    <!-- ================= SCRIPT ================= -->
     <script src="script.js"></script>
+
 </body>
 
 </html>

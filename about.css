@@ -10,10 +10,9 @@ body {
     color: white;
 }
 
-/* NAVBAR */
-/* ABOUT */
+/* ================= ABOUT ================= */
 .about {
-    padding: 50px;
+    padding: 60px 20px;
 }
 
 .about h1 {
@@ -28,6 +27,9 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    /* 🔥 important */
 }
 
 /* LEFT */
@@ -35,28 +37,33 @@ body {
     text-align: center;
 }
 
+/* IMAGE FIX */
 .image-box {
-    width: 430px;
-    height: 550px;
-    border-radius: 20%;
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 3/4;
+    border-radius: 20px;
     padding: 5px;
     background: #00f5ff;
     box-shadow: 0 0 25px #00f5ff;
+    margin: auto;
 }
 
 .image-box img {
     width: 100%;
     height: 100%;
-    border-radius: 20%;
+    border-radius: 20px;
+    object-fit: cover;
 }
 
 /* SOCIAL */
 .social {
-    margin-top: 40px;
+    margin-top: 25px;
 }
 
 .social a {
-    margin: 10px;
+    display: inline-block;
+    margin: 8px;
     padding: 8px 15px;
     border: 1px solid #00f5ff;
     border-radius: 20px;
@@ -72,15 +79,16 @@ body {
 
 /* RIGHT */
 .right {
-    width: 400px;
+    width: 100%;
+    max-width: 500px;
 }
 
 /* CARD */
 .card {
     background: rgba(0, 0, 0, 0.3);
-    padding: 30px;
+    padding: 25px;
     border-radius: 15px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     border: 1px solid #00f5ff;
     box-shadow: 0 0 15px #00f5ff;
     transition: 0.3s;
@@ -98,12 +106,10 @@ body {
 
 .card p {
     font-size: 14px;
-    line-height: 1.9;
+    line-height: 1.7;
 }
 
-/* ================= RESPONSIVE ================= */
-
-/* MOBILE */
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
 
     .about {
@@ -116,17 +122,11 @@ body {
 
     .about-container {
         flex-direction: column;
-        /* 🔥 main fix */
         text-align: center;
-        gap: 30px;
     }
 
     .image-box {
-        max-width: 250px;
-    }
-
-    .social {
-        margin-top: 20px;
+        max-width: 220px;
     }
 
     .right {
@@ -138,62 +138,14 @@ body {
     }
 }
 
-
-/* TABLET */
+/* ================= TABLET ================= */
 @media (max-width: 1024px) {
 
     .about-container {
         flex-direction: column;
-        gap: 40px;
     }
 
     .image-box {
-        max-width: 300px;
-    }
-}
-
-/* 🔥 HAMBURGER */
-.menu-toggle {
-    display: none;
-    font-size: 28px;
-    color: #00f5ff;
-    cursor: pointer;
-}
-
-/* SMOOTH */
-.navbar ul {
-    transition: all 0.4s ease;
-}
-
-/* MOBILE VIEW */
-@media (max-width: 768px) {
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .navbar {
-        flex-direction: row;
-    }
-
-    .navbar ul {
-        position: absolute;
-        top: 70px;
-        right: 0;
-        width: 100%;
-        background: black;
-        flex-direction: column;
-        text-align: center;
-
-        max-height: 0;
-        overflow: hidden;
-    }
-
-    .navbar ul li {
-        padding: 15px 0;
-    }
-
-    .navbar ul.active {
-        max-height: 500px;
+        max-width: 260px;
     }
 }

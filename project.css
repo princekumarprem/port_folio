@@ -10,11 +10,11 @@ body {
     color: white;
 }
 
-/* NAVBAR */
-
-/* PROJECT SECTION */
+/* ================= PROJECT SECTION ================= */
 .projects {
-    padding: 60px;
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .projects h1 {
@@ -24,14 +24,14 @@ body {
     margin-bottom: 40px;
 }
 
-/* GRID */
+/* ================= GRID ================= */
 .project-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    gap: 25px;
 }
 
-/* CARD */
+/* ================= CARD ================= */
 .card {
     background: #071f3b;
     padding: 20px;
@@ -61,119 +61,59 @@ body {
     color: #aaa;
 }
 
-/* BUTTONS */
+/* ================= BUTTONS ================= */
 .btns {
     margin-top: 15px;
 }
 
 .btns button {
-    padding: 6px 12px;
+    padding: 8px 14px;
     margin-right: 10px;
     border: none;
     border-radius: 6px;
     background: #00f5ff;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .btns button:hover {
     background: #00ffcc;
 }
 
-/* ================= RESPONSIVE ================= */
-
-/* AUTO GRID (BEST FIX) */
-.project-container {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-
-/* MOBILE */
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
 
     .projects {
-        padding: 30px 15px;
+        padding: 40px 15px;
     }
 
     .projects h1 {
         font-size: 26px;
     }
 
+    .project-container {
+        grid-template-columns: 1fr;
+        /* 🔥 1 card per row */
+    }
+
     .card {
-        padding: 15px;
+        text-align: center;
     }
 
-    .card h3 {
-        font-size: 18px;
-    }
-
-    .card p {
-        font-size: 13px;
-    }
-
-    /* BUTTON */
     .btns button {
-        padding: 8px 12px;
-        font-size: 12px;
-        margin-bottom: 5px;
+        width: 100%;
+        margin: 5px 0;
     }
 }
 
-
-/* TABLET */
+/* ================= TABLET ================= */
 @media (max-width: 1024px) {
 
-    .projects {
-        padding: 40px 20px;
+    .project-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .projects h1 {
         font-size: 32px;
-    }
-
-}
-
-/* 🔥 HAMBURGER */
-.menu-toggle {
-    display: none;
-    font-size: 28px;
-    color: #00f5ff;
-    cursor: pointer;
-}
-
-/* SMOOTH */
-.navbar ul {
-    transition: all 0.4s ease;
-}
-
-/* MOBILE VIEW */
-@media (max-width: 768px) {
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .navbar {
-        flex-direction: row;
-    }
-
-    .navbar ul {
-        position: absolute;
-        top: 70px;
-        right: 0;
-        width: 100%;
-        background: black;
-        flex-direction: column;
-        text-align: center;
-
-        max-height: 0;
-        overflow: hidden;
-    }
-
-    .navbar ul li {
-        padding: 15px 0;
-    }
-
-    .navbar ul.active {
-        max-height: 500px;
     }
 }

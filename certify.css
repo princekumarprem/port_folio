@@ -7,16 +7,17 @@ body {
     overflow-x: hidden;
 }
 
-/* 🌞 SOLAR SYSTEM (BIG + CLEAR) */
+/* 🌞 SOLAR SYSTEM (OPTIMIZED) */
 .solar-system {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(1.2);
-    /* 👈 BIG SIZE */
+    transform: translate(-50%, -50%) scale(1.1);
     width: 100%;
     height: 100%;
     z-index: -1;
+    pointer-events: none;
+    /* 🔥 important */
 }
 
 /* ☀ Sun */
@@ -24,12 +25,12 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 180px;
-    height: 180px;
+    width: 150px;
+    height: 150px;
     background: radial-gradient(circle, #ffcc00, #ff6600);
     border-radius: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0 0 120px #ff6600;
+    box-shadow: 0 0 80px #ff6600;
 }
 
 /* 🔄 Orbit */
@@ -37,48 +38,47 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    border: 1px dashed rgba(255, 255, 255, 0.15);
+    border: 1px dashed rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     transform: translate(-50%, -50%);
 }
 
 /* 🪐 Planets */
 .planet {
-    width: 14px;
-    height: 14px;
+    width: 10px;
+    height: 10px;
     background: white;
     border-radius: 50%;
     position: absolute;
-    top: -7px;
+    top: -5px;
     left: 50%;
 }
 
-/* 🌍 Bigger Orbits */
+/* 🌍 Orbits */
 .mercury {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     animation: rotate 6s linear infinite;
 }
 
 .venus {
-    width: 260px;
-    height: 260px;
+    width: 240px;
+    height: 240px;
     animation: rotate 10s linear infinite;
 }
 
 .earth {
-    width: 340px;
-    height: 340px;
+    width: 320px;
+    height: 320px;
     animation: rotate 14s linear infinite;
 }
 
 .mars {
-    width: 420px;
-    height: 420px;
+    width: 400px;
+    height: 400px;
     animation: rotate 18s linear infinite;
 }
 
-/* Rotation */
 @keyframes rotate {
     from {
         transform: translate(-50%, -50%) rotate(0deg);
@@ -89,8 +89,6 @@ body {
     }
 }
 
-/* 🔷 Navbar */
-
 /* 🔥 Section */
 .cert-section {
     padding: 60px;
@@ -99,7 +97,7 @@ body {
 
 .cert-section h1 {
     font-size: 42px;
-    color: #230fdc;
+    color: #00f5ff;
 }
 
 /* 📦 Cards Layout */
@@ -110,7 +108,7 @@ body {
     margin-top: 40px;
 }
 
-/* 💎 GLASS CARD (REAL TRANSPARENT FIX) */
+/* 💎 GLASS CARD */
 .cert-card {
     padding: 25px;
     border-radius: 15px;
@@ -118,14 +116,11 @@ body {
     color: white;
     position: relative;
 
-    /* ✅ REAL TRANSPARENCY */
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 
-    border: 1px solid rgba(255, 255, 255, 0.15);
-
-    transition: 0.4s ease;
+    transition: 0.4s;
     overflow: hidden;
 }
 
@@ -141,38 +136,31 @@ body {
 }
 
 @keyframes borderAnim {
-    0% {
-        filter: hue-rotate(0deg);
-    }
-
     100% {
         filter: hue-rotate(360deg);
     }
 }
 
-/* 🚀 Hover Effect */
+/* 🚀 Hover */
 .cert-card:hover {
-    transform: translateY(-12px) scale(1.05);
-    box-shadow: 0 0 40px rgba(0, 255, 255, 0.5);
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.4);
 }
 
 /* ⭐ Icon */
 .cert-card i {
-    font-size: 30px;
+    font-size: 28px;
     color: #00f5ff;
 }
 
-/* 🔗 Link Text */
+/* 🔗 Text */
 .cert-card span {
     display: block;
     margin-top: 10px;
     color: #00ffcc;
 }
 
-
-/* ================= RESPONSIVE ================= */
-
-/* MOBILE */
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
 
     .cert-section {
@@ -183,28 +171,26 @@ body {
         font-size: 26px;
     }
 
-    /* 🌌 Solar system small */
+    /* 🔥 PERFORMANCE FIX */
     .solar-system {
-        transform: translate(-50%, -50%) scale(0.7);
+        transform: translate(-50%, -50%) scale(0.6);
     }
 
     .sun {
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
     }
 
-    /* Cards */
     .cert-card {
-        padding: 20px;
+        padding: 18px;
     }
 
     .cert-card i {
-        font-size: 24px;
+        font-size: 22px;
     }
 }
 
-
-/* TABLET */
+/* ================= TABLET ================= */
 @media (max-width: 1024px) {
 
     .cert-section {
@@ -216,7 +202,7 @@ body {
     }
 
     .solar-system {
-        transform: translate(-50%, -50%) scale(1);
+        transform: translate(-50%, -50%) scale(0.9);
     }
 }
 
@@ -228,28 +214,25 @@ body {
     cursor: pointer;
 }
 
-/* SMOOTH */
+/* NAV SMOOTH */
 .navbar ul {
     transition: all 0.4s ease;
 }
 
-/* MOBILE VIEW */
+/* MOBILE NAV */
 @media (max-width: 768px) {
 
     .menu-toggle {
         display: block;
     }
 
-    .navbar {
-        flex-direction: row;
-    }
-
     .navbar ul {
         position: absolute;
         top: 70px;
-        right: 0;
+        left: 0;
         width: 100%;
         background: black;
+
         flex-direction: column;
         text-align: center;
 
@@ -257,11 +240,11 @@ body {
         overflow: hidden;
     }
 
-    .navbar ul li {
-        padding: 15px 0;
-    }
-
     .navbar ul.active {
         max-height: 500px;
+    }
+
+    .navbar ul li {
+        padding: 15px 0;
     }
 }

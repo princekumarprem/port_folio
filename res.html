@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Resume</title>
+    <title>Resume - Prince</title>
 
     <link rel="stylesheet" href="res.css">
     <link rel="stylesheet" href="index.css">
@@ -14,16 +14,10 @@
 
 <body>
 
-    <!-- 🌌 Background -->
-    <div class="stars"></div>
-    <div class="stars2"></div>
-    <div class="stars3"></div>
-
     <!-- 🔷 Navbar -->
     <nav class="navbar">
         <div class="logo">&lt;Prince /&gt;</div>
 
-        <!-- ☰ MENU BUTTON -->
         <div class="menu-toggle" id="menu-toggle">☰</div>
 
         <ul id="nav-links">
@@ -33,7 +27,7 @@
             <li><a href="skill.html">Skills</a></li>
             <li><a href="exp.html">Experience</a></li>
             <li><a href="certify.html">Certification</a></li>
-            <li><a href="res.html">Resume</a></li>
+            <li><a href="res.html" class="active">Resume</a></li>
             <li><a href="cont.html">Contact</a></li>
             <li><a href="gall.html">Gallery</a></li>
         </ul>
@@ -45,7 +39,7 @@
 
         <div class="resume-container">
 
-            <!-- Resume Preview -->
+            <!-- Preview -->
             <div class="resume-preview">
                 <iframe src="resume/my_resume.pdf"></iframe>
             </div>
@@ -63,22 +57,7 @@
 
         </div>
     </section>
-    <script>
-        const toggle = document.getElementById("toggleIcon");
 
-        toggle.addEventListener("click", () => {
-            document.body.classList.toggle("light");
-
-            // icon change
-            if (document.body.classList.contains("light")) {
-                toggle.classList.remove("fa-moon");
-                toggle.classList.add("fa-sun");
-            } else {
-                toggle.classList.remove("fa-sun");
-                toggle.classList.add("fa-moon");
-            }
-        });
-    </script>
     <script src="script.js"></script>
 </body>
 

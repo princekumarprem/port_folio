@@ -3,31 +3,38 @@
 
 <head>
     <meta charset="UTF-8">
+
+    <!-- 🔥 MOST IMPORTANT (mobile fix) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Skills</title>
 
-    <link rel="stylesheet" href="skill.css">
+    <!-- 🔥 ORDER IMPORTANT -->
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="skill.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
+    <!-- ⭐ Background -->
     <div class="stars"></div>
     <div class="stars2"></div>
     <div class="stars3"></div>
 
+    <!-- NAVBAR -->
     <nav class="navbar">
         <div class="logo">&lt;Prince /&gt;</div>
 
-        <!-- ☰ MENU BUTTON -->
+        <!-- ☰ MENU -->
         <div class="menu-toggle" id="menu-toggle">☰</div>
 
         <ul id="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="project.html">Projects</a></li>
-            <li><a href="skill.html">Skills</a></li>
+            <li><a href="skill.html" class="active">Skills</a></li>
             <li><a href="exp.html">Experience</a></li>
             <li><a href="certify.html">Certification</a></li>
             <li><a href="res.html">Resume</a></li>
@@ -36,6 +43,7 @@
         </ul>
     </nav>
 
+    <!-- SKILLS -->
     <section class="skills-section">
         <h1>My Skills</h1>
 
@@ -104,37 +112,19 @@
                 </div>
             </div>
 
-            <div class="skill-card">
-                <h2><i class="fa-solid fa-diagram-project"></i> SDLC Model</h2>
-                <div class="progress">
-                    <div class="bar sdlc">75%</div>
-                </div>
-            </div>
-
-            <div class="skill-card">
-                <h2><i class="fa-solid fa-people-group"></i> Agile Methodology</h2>
-                <div class="progress">
-                    <div class="bar agile">75%</div>
-                </div>
-            </div>
-
-            <div class="skill-card">
-                <h2><i class="fa-solid fa-file-word"></i> MS Word</h2>
-                <div class="progress">
-                    <div class="bar word">85%</div>
-                </div>
-            </div>
-
-            <div class="skill-card">
-                <h2><i class="fa-solid fa-file-excel"></i> MS Excel</h2>
-                <div class="progress">
-                    <div class="bar excel">80%</div>
-                </div>
-            </div>
-
         </div>
     </section>
-    <script src="script.js"></script>
+
+    <!-- JS -->
+    <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const navLinks = document.getElementById("nav-links");
+
+        menuToggle.onclick = () => {
+            navLinks.classList.toggle("active");
+        };
+    </script>
+
 </body>
 
 </html>
