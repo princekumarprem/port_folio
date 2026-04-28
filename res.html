@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Resume - Prince</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Prince Kumar Prem</title>
 
     <link rel="stylesheet" href="res.css">
     <link rel="stylesheet" href="index.css">
@@ -17,7 +18,6 @@
     <!-- 🔷 Navbar -->
     <nav class="navbar">
         <div class="logo">&lt;Prince /&gt;</div>
-
         <div class="menu-toggle" id="menu-toggle">☰</div>
 
         <ul id="nav-links">
@@ -33,29 +33,121 @@
         </ul>
     </nav>
 
+    <!-- 🌌 Background Stars -->
+    <div class="stars"></div>
+    <div class="stars2"></div>
+    <div class="stars3"></div>
+
     <!-- 🔥 Resume Section -->
     <section class="resume-section">
-        <h1>My Resume</h1>
 
-        <div class="resume-container">
+        <h1 class="title">My Resume</h1>
+        <p class="subtitle">Get to know me better through my professional journey</p>
 
-            <!-- Preview -->
-            <div class="resume-preview">
-                <iframe src="resume/my_resume.pdf"></iframe>
+        <div class="resume-card">
+
+            <!-- LEFT -->
+            <div class="left">
+
+                <div class="profile">
+                    <img src="images/pkp.png" alt="profile">
+                    <div>
+                        <h3>Hi, I'm</h3>
+                        <h1>Prince Kumar Prem</h1>
+                        <h4>Full Stack Developer</h4>
+                    </div>
+                </div>
+
+                <p class="intro">
+                    Passionate Computer Science student with strong skills in Java, Web Development,
+                    and Android Development. I love building real-world projects and solving problems.
+                </p>
+
+                <!-- badges -->
+                <div class="badges">
+                    <div>🎓 B.Tech CSE</div>
+                    <div>💼 Fresher</div>
+                    <div>📍 India</div>
+                    <div>🚀 Internship Ready</div>
+                </div>
+
+                <!-- skills -->
+                <h3 class="small-title">What I Bring</h3>
+                <div class="skills">
+                    <span>✔ Java & DSA</span>
+                    <span>✔ Web Development</span>
+                    <span>✔ Android Dev</span>
+                    <span>✔ Firebase</span>
+                    <span>✔ Problem Solver</span>
+                    <span>✔ Team Player</span>
+                </div>
+
             </div>
 
-            <!-- Buttons -->
-            <div class="resume-actions">
-                <a href="resume/my_resume.pdf" target="_blank" class="btn view">
-                    <i class="fa-solid fa-eye"></i> View Resume
-                </a>
+            <!-- RIGHT -->
+            <div class="right">
 
-                <a href="resume/my_resume.pdf" download class="btn download">
-                    <i class="fa-solid fa-download"></i> Download Resume
-                </a>
+                <h3 class="highlight-title">Resume Highlights</h3>
+
+                <div class="timeline">
+
+                    <div class="item">
+                        <span></span>
+                        <div>
+                            <h4>Education</h4>
+                            <p>B.Tech in Computer Science</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <span></span>
+                        <div>
+                            <h4>Technical Skills</h4>
+                            <p>Java, JavaScript, SQL, HTML, CSS, JS, Firebase</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <span></span>
+                        <div>
+                            <h4>Projects</h4>
+                            <p>Web & Android projects built</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <span></span>
+                        <div>
+                            <h4>Certifications</h4>
+                            <p>Java, Web Development</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <span></span>
+                        <div>
+                            <h4>Achievements</h4>
+                            <p>Problem solver, Tech enthusiast</p>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
 
         </div>
+
+        <!-- 🔘 Buttons -->
+        <div class="resume-actions">
+            <a href="resume/prince.pdf" target="_blank" class="btn view">
+                <i class="fa-solid fa-eye"></i> View Resume
+            </a>
+
+            <a href="resume/prince.pdf" download class="btn download">
+                <i class="fa-solid fa-download"></i> Download Resume
+            </a>
+        </div>
+
     </section>
 
     <script src="script.js"></script>

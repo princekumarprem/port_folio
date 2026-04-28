@@ -276,3 +276,10 @@ p {
         height: 250px;
     }
 }
+
+@media (max-width: 768px) {
+    #nav-links {
+        height: 100vh;
+        overflow-y: auto;
+    }
+}
