@@ -1,0 +1,238 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(135deg, #020617, #001f3f);
+    color: white;
+}
+
+/* Navbar */
+
+/* Section */
+.contact {
+    padding: 60px;
+    text-align: center;
+}
+
+.contact h1 {
+    font-size: 45px;
+    background: linear-gradient(45deg, #00f5ff, #ff00ff);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.contact p {
+    color: #ccc;
+    font-size: 18px;
+}
+
+/* Layout */
+.contact-box {
+    display: flex;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+/* LEFT */
+.left {
+    flex: 1.5;
+}
+
+/* Social Icons */
+.socials {
+    margin-bottom: 25px;
+}
+
+.socials a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 65px;
+    height: 65px;
+    margin: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    font-size: 26px;
+    color: white;
+    transition: 0.4s;
+}
+
+.socials a:hover {
+    background: linear-gradient(45deg, #00f5ff, #ff00ff);
+    transform: scale(1.2);
+    box-shadow: 0 0 25px #00f5ff;
+}
+
+/* MAP BIG */
+.map iframe {
+    width: 100%;
+    height: 380px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+}
+
+/* RIGHT */
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 🔥 ULTRA GLASS CARD */
+.info-card {
+    padding: 45px;
+    border-radius: 25px;
+    width: 100%;
+
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    transition: 0.4s;
+}
+
+.info-card:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.4);
+}
+
+/* TEXT BIG */
+.info-card h2 {
+    font-size: 30px;
+    margin-bottom: 25px;
+    color: #00f5ff;
+}
+
+.info-card p {
+    margin: 20px 0;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.info-card i {
+    margin-right: 12px;
+    font-size: 24px;
+    color: #00ffcc;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .contact {
+        padding: 30px 15px;
+    }
+
+    .contact h1 {
+        font-size: 28px;
+    }
+
+    .contact p {
+        font-size: 14px;
+    }
+
+    /* 🔥 MAIN FIX */
+    .contact-box {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    /* LEFT */
+    .left {
+        width: 100%;
+    }
+
+    /* SOCIAL ICON */
+    .socials a {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    /* MAP */
+    .map iframe {
+        height: 250px;
+    }
+
+    /* RIGHT */
+    .right {
+        width: 100%;
+    }
+
+    /* CARD */
+    .info-card {
+        padding: 25px;
+    }
+
+    .info-card h2 {
+        font-size: 22px;
+    }
+
+    .info-card p {
+        font-size: 16px;
+    }
+}
+
+
+/* TABLET */
+@media (max-width: 1024px) {
+
+    .contact-box {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .contact h1 {
+        font-size: 34px;
+    }
+}
+
+/* 🔥 HAMBURGER */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: #00f5ff;
+    cursor: pointer;
+}
+
+/* SMOOTH */
+.navbar ul {
+    transition: all 0.4s ease;
+}
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar {
+        flex-direction: row;
+    }
+
+    .navbar ul {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        background: black;
+        flex-direction: column;
+        text-align: center;
+
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    .navbar ul li {
+        padding: 15px 0;
+    }
+
+    .navbar ul.active {
+        max-height: 500px;
+    }
+}

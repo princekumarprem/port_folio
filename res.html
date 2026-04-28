@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Resume</title>
+
+    <link rel="stylesheet" href="res.css">
+    <link rel="stylesheet" href="index.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- 🌌 Background -->
+    <div class="stars"></div>
+    <div class="stars2"></div>
+    <div class="stars3"></div>
+
+    <!-- 🔷 Navbar -->
+    <nav class="navbar">
+        <div class="logo">&lt;Prince /&gt;</div>
+
+        <!-- ☰ MENU BUTTON -->
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+
+        <ul id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="skill.html">Skills</a></li>
+            <li><a href="exp.html">Experience</a></li>
+            <li><a href="certify.html">Certification</a></li>
+            <li><a href="res.html">Resume</a></li>
+            <li><a href="cont.html">Contact</a></li>
+            <li><a href="gall.html">Gallery</a></li>
+        </ul>
+    </nav>
+
+    <!-- 🔥 Resume Section -->
+    <section class="resume-section">
+        <h1>My Resume</h1>
+
+        <div class="resume-container">
+
+            <!-- Resume Preview -->
+            <div class="resume-preview">
+                <iframe src="resume/my_resume.pdf"></iframe>
+            </div>
+
+            <!-- Buttons -->
+            <div class="resume-actions">
+                <a href="resume/my_resume.pdf" target="_blank" class="btn view">
+                    <i class="fa-solid fa-eye"></i> View Resume
+                </a>
+
+                <a href="resume/my_resume.pdf" download class="btn download">
+                    <i class="fa-solid fa-download"></i> Download Resume
+                </a>
+            </div>
+
+        </div>
+    </section>
+    <script>
+        const toggle = document.getElementById("toggleIcon");
+
+        toggle.addEventListener("click", () => {
+            document.body.classList.toggle("light");
+
+            // icon change
+            if (document.body.classList.contains("light")) {
+                toggle.classList.remove("fa-moon");
+                toggle.classList.add("fa-sun");
+            } else {
+                toggle.classList.remove("fa-sun");
+                toggle.classList.add("fa-moon");
+            }
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

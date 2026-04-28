@@ -4,135 +4,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Prince Prem | Portfolio</title>
-
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
 
-    <header>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">&lt;Prince /&gt;</div>
 
-        <nav>
+        <!-- ☰ MENU BUTTON -->
+        <div class="menu-toggle" id="menu-toggle">☰</div>
 
-            <h2 class="logo">&lt;Prince /&gt;</h2>
+        <ul id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="skill.html">Skills</a></li>
+            <li><a href="exp.html">Experience</a></li>
+            <li><a href="certify.html">Certification</a></li>
+            <li><a href="res.html">Resume</a></li>
+            <li><a href="cont.html">Contact</a></li>
+            <li><a href="gall.html">Gallery</a></li>
+        </ul>
+    </nav>
 
-            <ul class="nav-links">
+    <!-- HOME -->
+    <section class="home">
 
-                <li><a href="#" class="nav-item active">Home</a></li>
-                <li><a href="about.html" class="nav-item">About</a></li>
-                <li><a href="#" class="nav-item">Projects</a></li>
-                <li><a href="#" class="nav-item">Skills</a></li>
-                <li><a href="#" class="nav-item">Certification</a></li>
-                <li><a href="#" class="nav-item">Experience</a></li>
-                <li><a href="#" class="nav-item">Gallery</a></li>
-                <li><a href="#" class="nav-item">Resume</a></li>
-                <li><a href="#" class="nav-item">Contact</a></li>
-
-            </ul>
-
-        </nav>
-
-    </header>
-
-
-
-    <section class="hero">
-
-        <div class="hero-left">
-
+        <!-- CLOCK -->
+        <div class="clock-box">
             <div class="clock">
+                <div class="numbers">
+                    <span style="--i:1">1</span>
+                    <span style="--i:2">2</span>
+                    <span style="--i:3">3</span>
+                    <span style="--i:4">4</span>
+                    <span style="--i:5">5</span>
+                    <span style="--i:6">6</span>
+                    <span style="--i:7">7</span>
+                    <span style="--i:8">8</span>
+                    <span style="--i:9">9</span>
+                    <span style="--i:10">10</span>
+                    <span style="--i:11">11</span>
+                    <span style="--i:12">12</span>
+                </div>
 
-                <div class="number n12">12</div>
-                <div class="number n1">1</div>
-                <div class="number n2">2</div>
-                <div class="number n3">3</div>
-                <div class="number n4">4</div>
-                <div class="number n5">5</div>
-                <div class="number n6">6</div>
-                <div class="number n7">7</div>
-                <div class="number n8">8</div>
-                <div class="number n9">9</div>
-                <div class="number n10">10</div>
-                <div class="number n11">11</div>
-
-                <div class="hand hour"></div>
-                <div class="hand minute"></div>
-                <div class="hand second"></div>
-
-                <div class="center"></div>
-
+                <div class="hand hour" id="hour"></div>
+                <div class="hand minute" id="minute"></div>
+                <div class="hand second" id="second"></div>
             </div>
 
+            <div class="digital" id="digital">00:00 AM</div>
         </div>
 
-
-
-        <div class="hero-right">
-
-            <h4 class="tagline">// Where Logic Meets Creativity</h4>
+        <!-- CONTENT -->
+        <div class="content">
+            <span class="tag">// Where Logic Meets Creativity</span>
 
             <h1>Hi, I'm Prince Kumar Prem</h1>
 
-            <h3 class="typing"></h3>
+            <h2 class="typing">
+                <span id="typing"></span>
+            </h2>
 
-            <p>
-                Turning ideas into reliable software solutions and building modern web applications.
-            </p>
+            <p>Turning ideas into reliable software solutions.</p>
 
-            <a href="#about" class="explore-btn">
-                Explore More <span class="arrow">→</span>
-            </a>
-
+            <button class="btn">Explore More →</button>
         </div>
 
     </section>
 
+    <!-- ECG + TEXT -->
+    <div class="heartbeat">
+        <div class="line"></div>
 
-
-    <!-- HEART LINE BOTTOM -->
-
-    <div class="heartbeat-wrapper">
-
-        <svg viewBox="0 0 1200 120" class="heartbeat">
-
-            <path d="M0 60 
-L80 60 
-L100 40 
-L120 80 
-L140 20 
-L160 100 
-L180 60 
-L260 60
-L280 40 
-L300 80 
-L320 20 
-L340 100 
-L360 60 
-L440 60
-L460 40 
-L480 80 
-L500 20 
-L520 100 
-L540 60 
-L620 60
-L640 40 
-L660 80 
-L680 20 
-L700 100 
-L720 60 
-L1200 60" class="heartbeat-line" />
-
-        </svg>
-
+        <div class="name">
+            Prince Kumar Prem • Developer • Designer • Creator •
+            Prince Kumar Prem • Developer • Designer • Creator •
+        </div>
     </div>
 
+    <!-- JS -->
+    <script>
+
+        // CLOCK
+        function updateClock() {
+            let now = new Date();
+
+            let h = now.getHours();
+            let m = now.getMinutes();
+            let s = now.getSeconds();
+
+            let hourDeg = (h % 12) * 30 + m * 0.5;
+            let minDeg = m * 6;
+            let secDeg = s * 6;
+
+            document.getElementById("hour").style.transform = `rotate(${hourDeg}deg)`;
+            document.getElementById("minute").style.transform = `rotate(${minDeg}deg)`;
+            document.getElementById("second").style.transform = `rotate(${secDeg}deg)`;
+
+            let ampm = h >= 12 ? "PM" : "AM";
+            let hh = h % 12 || 12;
+            let mm = m < 10 ? "0" + m : m;
+
+            document.getElementById("digital").innerText = `${hh}:${mm} ${ampm}`;
+        }
+
+        setInterval(updateClock, 1000);
 
 
+        // TYPING TEXT
+        const roles = ["Java Developer", "Android Developer", "Web Developer"];
+
+        let i = 0, j = 0, current = "", del = false;
+
+        function typing() {
+            let txt = roles[i];
+
+            if (!del) {
+                current = txt.substring(0, j++);
+            } else {
+                current = txt.substring(0, j--);
+            }
+
+            document.getElementById("typing").innerText = current;
+            document.getElementById("typing").style.width = "300px";
+            if (!del && j == txt.length) {
+                del = true;
+                setTimeout(typing, 1000);
+                return;
+            }
+
+            if (del && j == 0) {
+                del = false;
+                i = (i + 1) % roles.length;
+            }
+
+            setTimeout(typing, del ? 50 : 100);
+        }
+
+        typing();
+
+    </script>
     <script src="script.js"></script>
-
 </body>
 
 </html>

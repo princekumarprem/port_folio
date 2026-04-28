@@ -2,99 +2,81 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-    <title>About</title>
-
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+    <title>About - Prince</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
 
-    <nav>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">&lt;Prince /&gt;</div>
 
-        <h2 class="logo">&lt;Prince /&gt;</h2>
+        <!-- ☰ MENU BUTTON -->
+        <div class="menu-toggle" id="menu-toggle">☰</div>
 
-        <ul class="nav-links">
-
-            <li><a href="index.html" class="nav-item">Home</a></li>
-            <li><a href="about.html" class="nav-item active">About</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Skills</a></li>
-            <li><a href="#">Certification</a></li>
-            <li><a href="#">Experience</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Resume</a></li>
-            <li><a href="#">Contact</a></li>
-
+        <ul id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="skill.html">Skills</a></li>
+            <li><a href="exp.html">Experience</a></li>
+            <li><a href="certify.html">Certification</a></li>
+            <li><a href="res.html">Resume</a></li>
+            <li><a href="cont.html">Contact</a></li>
+            <li><a href="gall.html">Gallery</a></li>
         </ul>
-
     </nav>
-
+    <!-- ABOUT SECTION -->
     <section class="about">
 
-        <h1 class="about-title">About Me</h1>
+        <h1>About Me</h1>
 
         <div class="about-container">
 
             <!-- LEFT SIDE -->
+            <div class="left">
 
-            <div class="about-left">
-
-                <div class="profile-circle">
-
-                    <img src="images/pkp.jpeg">
-
+                <div class="image-box">
+                    <img src="images/prince.png" alt="profile">
                 </div>
 
-                <div class="social-buttons">
-
-                    <a href="#"><i class="fa-brands fa-github"></i> GitHub</a>
-                    <a href="#"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
-
+                <div class="social">
+                    <a href="https://github.com/princekumarprem">GitHub</a>
+                    <a href="https://www.linkedin.com/in/prince-kumar-2a645b267/">LinkedIn</a>
+                    <a href="https://www.instagram.com/prince_kumar_prem31/">Instagram</a>
                 </div>
 
             </div>
 
             <!-- RIGHT SIDE -->
+            <div class="right">
 
-            <div class="about-right">
-
-                <div class="info-card">
-
+                <div class="card">
                     <h3>💼 Current Position</h3>
-
                     <p>
-                        Software Developer passionate about building modern web applications and solving real world
-                        problems. Currently working in Black Apple Technologies in webdeveloper intern.
+                        Software Developer passionate about building modern web
+                        applications and solving real world problems. Currently
+                        working as Web Developer Intern.
                     </p>
-
                 </div>
 
-                <div class="info-card">
-
+                <div class="card">
                     <h3>🎓 Education</h3>
-
                     <p>
-                        Bachelor of Technology in Computer Science. Strong foundation in Web Development and Software
-                        Development.
+                        Bachelor of Technology in Computer Science. Strong
+                        foundation in Web Development and Software Development.
                     </p>
-
                 </div>
 
-                <div class="info-card">
-
-                    <h3>🎯 College Journey</h3>
-
+                <div class="card">
+                    <h3>🚀 College Journey</h3>
                     <p>
-                        Started programming as a beginner and built multiple real-world projects gaining strong
-                        practical experience.
+                        Actively learning and building projects in Web and Android.
+                        Focused on improving skills and preparing for placements.
                     </p>
-
                 </div>
 
             </div>
@@ -102,7 +84,7 @@
         </div>
 
     </section>
-
+    <script src="script.js"></script>
 </body>
 
 </html>

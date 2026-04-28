@@ -1,0 +1,397 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI';
+}
+
+body {
+    background: #0b1d36;
+    color: white;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 50px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 22px;
+    color: #00f5ff;
+    font-weight: bold;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #00f5ff;
+    transition: 0.3s;
+}
+
+.navbar ul li a {
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    padding: 5px 8px;
+}
+
+.navbar a:hover,
+.navbar .active {
+    color: #00ff11;
+    border-bottom: 2px solid #00ffcc;
+}
+
+/* HOME */
+.home {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 80vh;
+    padding: 40px;
+}
+
+/* CLOCK */
+.clock {
+    width: 300px;
+    height: 300px;
+    border: 8px solid white;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 0 40px red;
+}
+
+.numbers span {
+    position: absolute;
+    inset: 10px;
+    transform: rotate(calc(30deg * var(--i)));
+    text-align: center;
+    color: red;
+}
+
+/* HANDS */
+.hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom;
+}
+
+.hour {
+    width: 6px;
+    height: 60px;
+    background: red;
+}
+
+.minute {
+    width: 4px;
+    height: 80px;
+    background: red;
+}
+
+.second {
+    width: 2px;
+    height: 100px;
+    background: white;
+}
+
+/* DIGITAL CLOCK */
+.digital {
+    margin-top: 25px;
+    padding: 15px 50px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    font-size: 24px;
+    color: #00f5ff;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.digital:hover {
+    box-shadow: 0 0 20px #00f5ff;
+}
+
+/* CONTENT */
+.content {
+    max-width: 550px;
+    line-height: 1.6;
+}
+
+/* TAG */
+.tag {
+    display: inline-block;
+    margin-bottom: 15px;
+    border: 1px solid #00f5ff;
+    padding: 6px 15px;
+    border-radius: 20px;
+    color: #00f5ff;
+}
+
+/* HEADING */
+h1 {
+    font-size: 42px;
+    margin: 15px 0;
+}
+
+/* FIXED TYPING (NO JUMP) */
+.typing {
+    display: inline-block;
+    width: 300px;
+    /* 🔥 FIXED WIDTH (important) */
+    height: 40px;
+    overflow: hidden;
+
+    font-size: 30px;
+    font-weight: bold;
+
+    background: linear-gradient(270deg, #00f5ff, #ff00ff, #00ffcc, #ff0000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes colorShift {
+    0% {
+        background-position: 0%
+    }
+
+    50% {
+        background-position: 100%
+    }
+
+    100% {
+        background-position: 0%
+    }
+}
+
+/* PARAGRAPH */
+p {
+    margin: 15px 0 25px;
+    color: #cfd8dc;
+}
+
+/* BUTTON */
+.btn {
+    margin-top: 10px;
+    padding: 12px 25px;
+    background: linear-gradient(45deg, #00f5ff, #00ffcc);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* HEARTBEAT */
+.heartbeat {
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* ECG LINE */
+.line {
+    width: 200%;
+    height: 2px;
+    background: red;
+    position: relative;
+    animation: moveLine 10s linear infinite;
+}
+
+.line::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: red;
+
+    /* MOUNTAIN ECG */
+    clip-path: polygon(0% 50%, 5% 50%,
+            10% 20%, 15% 80%,
+            20% 40%, 25% 50%,
+            30% 50%, 35% 20%,
+            40% 80%, 45% 50%,
+            100% 50%);
+}
+
+@keyframes moveLine {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+/* FULL WIDTH SCROLL TEXT */
+.name {
+    display: inline-block;
+    white-space: nowrap;
+    color: rgb(55, 0, 255);
+    font-size: 22px;
+    letter-spacing: 2px;
+
+    padding-left: 100%;
+    margin-top: 15px;
+    animation: scrollFull 20s linear infinite;
+}
+
+@keyframes scrollFull {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    /* NAVBAR */
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* HOME SECTION */
+    .home {
+        flex-direction: column;
+        height: auto;
+        /* 🔥 fix */
+        text-align: center;
+        gap: 30px;
+    }
+
+    /* CLOCK */
+    .clock {
+        width: 200px;
+        height: 200px;
+    }
+
+    /* TEXT */
+    h1 {
+        font-size: 26px;
+    }
+
+    .typing {
+        width: 220px;
+        /* 🔥 smaller */
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    /* CONTENT */
+    .content {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    /* DIGITAL CLOCK */
+    .digital {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+
+    /* HEARTBEAT TEXT */
+    .name {
+        font-size: 16px;
+    }
+}
+
+
+/* TABLET */
+@media (max-width: 1024px) {
+
+    .home {
+        flex-direction: column;
+        height: auto;
+        gap: 40px;
+    }
+
+    .clock {
+        width: 250px;
+        height: 250px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .typing {
+        width: 260px;
+        font-size: 26px;
+    }
+}
+
+/* 🔥 HAMBURGER */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: #00f5ff;
+    cursor: pointer;
+}
+
+/* SMOOTH */
+.navbar ul {
+    transition: all 0.4s ease;
+}
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar {
+        flex-direction: row;
+    }
+
+    .navbar ul {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        background: black;
+        flex-direction: column;
+        text-align: center;
+
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    .navbar ul li {
+        padding: 15px 0;
+    }
+
+    .navbar ul.active {
+        max-height: 500px;
+    }
+}

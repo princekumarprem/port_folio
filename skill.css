@@ -1,0 +1,266 @@
+/* 🌌 Background */
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #020617;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* ⭐ Stars */
+.stars,
+.stars2,
+.stars3 {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+.stars {
+    background: url('https://www.transparenttextures.com/patterns/stardust.png');
+    animation: moveStars 50s linear infinite;
+}
+
+.stars2 {
+    animation: moveStars 100s linear infinite;
+    opacity: 0.5;
+}
+
+.stars3 {
+    animation: moveStars 150s linear infinite;
+    opacity: 0.3;
+}
+
+@keyframes moveStars {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-1000px);
+    }
+}
+
+/* 🔷 Navbar */
+
+
+/* 🔥 Skills */
+.skills-section {
+    padding: 60px;
+    text-align: center;
+}
+
+.skills-section h1 {
+    font-size: 40px;
+    margin-bottom: 40px;
+    color: #ff3b3b;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.skill-card {
+    background: rgba(0, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 0 20px #00f5ff;
+}
+
+/* Icons */
+.skill-card i {
+    margin-right: 10px;
+    color: #00f5ff;
+}
+
+/* Progress */
+.progress {
+    background: #1e293b;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.bar {
+    height: 20px;
+    line-height: 20px;
+    padding-right: 10px;
+    text-align: right;
+    border-radius: 10px;
+
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: fillBar 2s ease forwards;
+}
+
+@keyframes fillBar {
+    to {
+        transform: scaleX(1);
+    }
+}
+
+/* 🎨 COLORS */
+.java {
+    width: 95%;
+    background: #f97316;
+}
+
+.html {
+    width: 95%;
+    background: #e34c26;
+}
+
+.css {
+    width: 90%;
+    background: #264de4;
+}
+
+.js {
+    width: 85%;
+    background: #facc15;
+    color: black;
+}
+
+.firebase {
+    width: 80%;
+    background: #ffca28;
+    color: black;
+}
+
+.react {
+    width: 75%;
+    background: #61dbfb;
+    color: black;
+}
+
+.spring {
+    width: 70%;
+    background: #6db33f;
+}
+
+.android {
+    width: 85%;
+    background: #3ddc84;
+    color: black;
+}
+
+.mysql {
+    width: 80%;
+    background: #00758f;
+}
+
+.sdlc {
+    width: 75%;
+    background: #8b5cf6;
+}
+
+.agile {
+    width: 75%;
+    background: #ec4899;
+}
+
+.word {
+    width: 85%;
+    background: #2b579a;
+}
+
+.excel {
+    width: 80%;
+    background: #217346;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .skills-section {
+        padding: 30px 15px;
+    }
+
+    .skills-section h1 {
+        font-size: 26px;
+    }
+
+    .skill-card {
+        padding: 15px;
+    }
+
+    .skill-card h3 {
+        font-size: 16px;
+    }
+
+    .bar {
+        height: 16px;
+        font-size: 12px;
+    }
+}
+
+
+/* TABLET */
+@media (max-width: 1024px) {
+
+    .skills-section {
+        padding: 40px 20px;
+    }
+
+    .skills-section h1 {
+        font-size: 32px;
+    }
+}
+
+/* 🔥 HAMBURGER */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: #00f5ff;
+    cursor: pointer;
+}
+
+/* SMOOTH */
+.navbar ul {
+    transition: all 0.4s ease;
+}
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar {
+        flex-direction: row;
+    }
+
+    .navbar ul {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        background: black;
+        flex-direction: column;
+        text-align: center;
+
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    .navbar ul li {
+        padding: 15px 0;
+    }
+
+    .navbar ul.active {
+        max-height: 500px;
+    }
+}

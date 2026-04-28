@@ -1,0 +1,199 @@
+/* 🌌 Background */
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #020617;
+    color: white;
+}
+
+/* ⭐ Stars */
+.stars,
+.stars2,
+.stars3 {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png');
+    z-index: -1;
+}
+
+.stars {
+    animation: move 50s linear infinite;
+}
+
+.stars2 {
+    animation: move 100s linear infinite;
+    opacity: 0.5;
+}
+
+.stars3 {
+    animation: move 150s linear infinite;
+    opacity: 0.3;
+}
+
+@keyframes move {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-1000px);
+    }
+}
+
+/* 🔷 Navbar */
+
+/* 🔥 Section */
+.resume-section {
+    padding: 60px;
+    text-align: center;
+}
+
+.resume-section h1 {
+    font-size: 42px;
+    background: linear-gradient(45deg, #00f5ff, #ff00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* 📄 Container */
+.resume-container {
+    margin-top: 40px;
+}
+
+/* 📄 Preview */
+.resume-preview {
+    width: 80%;
+    height: 500px;
+    margin: auto;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 2px solid #00f5ff;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+}
+
+.resume-preview iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* 🔘 Buttons */
+.resume-actions {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+/* View Button */
+.view {
+    background: linear-gradient(45deg, #00f5ff, #00ffcc);
+    color: black;
+}
+
+/* Download Button */
+.download {
+    background: linear-gradient(45deg, #ff00ff, #ff0066);
+    color: white;
+}
+
+/* ✨ Hover Effect */
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px white;
+}
+
+/* 🌗 Toggle Icon */
+.toggle {
+    cursor: pointer;
+    font-size: 20px;
+    color: #00f5ff;
+}
+
+/* 🌞 Light Mode */
+body.light {
+    background: #f1f5f9;
+    color: black;
+}
+
+/* Navbar Light */
+body.light .navbar {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+body.light .navbar a {
+    color: black;
+}
+
+/* Resume Box Light */
+body.light .resume-preview {
+    border: 2px solid #333;
+    box-shadow: none;
+}
+
+/* Buttons Light */
+body.light .view {
+    background: #00bcd4;
+    color: white;
+}
+
+body.light .download {
+    background: #e91e63;
+}
+
+/* 🔥 HAMBURGER */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: #00f5ff;
+    cursor: pointer;
+}
+
+/* SMOOTH */
+.navbar ul {
+    transition: all 0.4s ease;
+}
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar {
+        flex-direction: row;
+    }
+
+    .navbar ul {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        background: black;
+        flex-direction: column;
+        text-align: center;
+
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    .navbar ul li {
+        padding: 15px 0;
+    }
+
+    .navbar ul.active {
+        max-height: 500px;
+    }
+}
